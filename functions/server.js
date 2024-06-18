@@ -12,7 +12,7 @@ app.get('/',(req,res)=>{
         res.sendFile(path.join(__dirname, '../index.html'));
     }else{
         regClient.push(req.body);
-        res.send(`<a href="/">LOGIN</a>`)
+        res.send(`<a href="https://chachaxocode76.netlify.app/">LOGIN</a>`)
     }
 })
 app.post('/api/auth/register',(req,res)=>{
