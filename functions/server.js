@@ -29,4 +29,4 @@ wss.on('connection', (ws) => {
     ws.send('Hello! Message From Server!!');
 });
 
-module.exports.handler = serverless(wss);
+module.exports.handler = serverless(app);
