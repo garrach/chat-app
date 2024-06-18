@@ -1,6 +1,7 @@
 const express = require('express');
 const http = require('http');
 const WebSocket = require('ws');
+const cors = require('cors');
 const serverless = require('serverless-http');
 const app = express();
 app.use(cors());
