@@ -15,12 +15,10 @@ router.get('/', (req, res) => {
     });
 });
 app.get('/',(req,res)=>{
-    if (regClient.length>0) {
-        res.sendFile(path.join(__dirname, '../public/index.html'));
-    }else{
+    
         res.set({contentType:"text/html"})
         res.send(`<a href="/api/auth/login">LOGIN</a>`)
-    }
+    
 })
 
 app.post('/api/auth/register',(req,res)=>{
