@@ -14,8 +14,8 @@ router.get('/', (req, res) => {
         hello: 'world'
     });
 });
-app.get('/',(req,res)=>{
-   
+app.get('/home',(req,res)=>{
+    res.sendFile(path.join(__dirname, '../public/index.html'));
 })
 
 app.post('/api/auth/register',(req,res)=>{
