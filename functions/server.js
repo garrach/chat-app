@@ -8,7 +8,9 @@ router.get('/', (req, res) => {
         hello: 'world'
     });
 });
-
+app.get('/',(req,res)=>{
+    res.send(JSON.stringify({asba:"liik"}))
+})
 app.use('/.netlify/functions/server', router); // route must match the redirect in netlify.toml
 
 module.exports.handler = serverless(app);
