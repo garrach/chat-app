@@ -1,50 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Include Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
-    <title>Match Making Dashboard</title>
+    <title>Landing Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
+<body class="bg-gray-100 text-gray-900">
 
-<body class="bg-gray-100">
-    <div class="container mx-auto py-6">
-        <!-- Header -->
-        <header class="mb-6">
-            <h1 class="text-3xl font-bold text-center text-blue-600">Match Making Dashboard</h1>
-        </header>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold text-blue-600">MyWebsite</div>
+            <div>
+                <a href="#" class="text-gray-700 hover:text-blue-600 mx-4">Home</a>
+                <a href="#features" class="text-gray-700 hover:text-blue-600 mx-4">Features</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 mx-4">Contact</a>
+                <a href="/login" class="bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Login</a>
+            </div>
+        </div>
+    </nav>
 
-        <!-- Main Content Area -->
-        <main class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <!-- Left Column (User Info) -->
-            <section class="bg-white rounded-lg shadow-md p-6">
-                <h2 class="text-xl font-semibold mb-4">User Information</h2>
-                <div class="flex items-center space-x-4">
-                    <img src="user-avatar.jpg" alt="User Avatar" class="h-12 w-12 rounded-full">
-                    <div>
-                        <p class="font-semibold">John Doe</p>
-                        <p class="text-gray-600">Age: 30</p>
-                    </div>
+    <!-- Hero Section -->
+    <section class="bg-blue-600 text-white">
+        <div class="container mx-auto px-4 py-20 text-center">
+            <h1 class="text-4xl font-bold mb-4">Welcome to MyWebsite</h1>
+            <p class="text-xl mb-8">Your one-stop solution for awesome services</p>
+            <a href="#features" class="bg-white text-blue-600 py-3 px-6 rounded-lg hover:bg-gray-200">Learn More</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-12">Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4">Feature One</h3>
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
                 </div>
-            </section>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4">Feature Two</h3>
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold mb-4">Feature Three</h3>
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-            <!-- Right Column (Match List) -->
-            <section class="bg-white rounded-lg shadow-md p-6">
-                <h2 class="text-xl font-semibold mb-4">Matches</h2>
-                <ul>
-                    <li class="flex items-center justify-between space-x-4 mb-2">
-                        <div>
-                            <p class="font-semibold">Jane Smith</p>
-                            <p class="text-gray-600">Age: 28</p>
-                        </div>
-                        <button class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-4 rounded">Message</button>
-                    </li>
-                </ul>
-            </section>
-        </main>
-    </div>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-12">Contact Us</h2>
+            <form class="max-w-md mx-auto">
+                <div class="mb-4">
+                    <input type="text" placeholder="Name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:border-blue-300">
+                </div>
+                <div class="mb-4">
+                    <input type="email" placeholder="Email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:border-blue-300">
+                </div>
+                <div class="mb-4">
+                    <textarea placeholder="Message" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring focus:border-blue-300"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2024 MyWebsite. All rights reserved.</p>
+        </div>
+    </footer>
+
 </body>
-
 </html>
