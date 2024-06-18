@@ -17,7 +17,9 @@ router.get('/', (req, res) => {
 app.get('/home',(req,res)=>{
     res.sendFile(path.join(__dirname, '../public/index.html'));
 })
-
+app.get('/test',(req,res)=>{
+    res.send(JSON.stringify({message:'it works'}));
+})
 app.post('/api/auth/register',(req,res)=>{
     regClient.push(req.body);
     res.sendFile(path.join(__dirname, '../public/login.html'));
