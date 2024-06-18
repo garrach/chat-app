@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
     });
 });
 app.get('/',(req,res)=>{
-    res.send(JSON.stringify({asba:"liik"}))
+    res.sendFile(path.join(__dirname, '../public/index.html'));
 })
 app.use('/.netlify/functions/server', router); // route must match the redirect in netlify.toml
 

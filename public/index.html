@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <title>Match Making Dashboard</title>
+</head>
+
+<body class="bg-gray-100">
+    <div class="container mx-auto py-6">
+        <!-- Header -->
+        <header class="mb-6">
+            <h1 class="text-3xl font-bold text-center text-blue-600">Match Making Dashboard</h1>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Left Column (User Info) -->
+            <section class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-semibold mb-4">User Information</h2>
+                <div class="flex items-center space-x-4">
+                    <img src="user-avatar.jpg" alt="User Avatar" class="h-12 w-12 rounded-full">
+                    <div>
+                        <p class="font-semibold">John Doe</p>
+                        <p class="text-gray-600">Age: 30</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Column (Match List) -->
+            <section class="bg-white rounded-lg shadow-md p-6">
+                <h2 class="text-xl font-semibold mb-4">Matches</h2>
+                <ul>
+                    <li class="flex items-center justify-between space-x-4 mb-2">
+                        <div>
+                            <p class="font-semibold">Jane Smith</p>
+                            <p class="text-gray-600">Age: 28</p>
+                        </div>
+                        <button class="bg-blue-500 hover:bg-blue-600 text-white py-1 px-4 rounded">Message</button>
+                    </li>
+                </ul>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
