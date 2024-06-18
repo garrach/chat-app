@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
     });
 });
 app.get('/home',(req,res)=>{
-    res.send(JSON.stringify({dir:path.join(__dirname, '../public')}));
+    res.send(JSON.stringify({dir:path.resolve(__dirname, '../public')}));
 })
 app.get('/test',(req,res)=>{
     res.send(JSON.stringify({message:'it works'}));
