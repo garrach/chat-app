@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
     });
 });
 app.get('/home',(req,res)=>{
-    res.sendFile('../public/index.html');
+    res.send(JSON.stringify({dir:__dirname}));
 })
 app.get('/test',(req,res)=>{
     res.send(JSON.stringify({message:'it works'}));
