@@ -8,8 +8,9 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "cros": "^1.0.1",
     "express": "^4.17.1",
     "serverless-http": "^2.7.0",
-    "ws": "^8.0.0"
+    "ws": "^8.17.1"
   }
 }
