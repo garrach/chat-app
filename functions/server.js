@@ -15,16 +15,21 @@ router.get('/', (req, res) => {
     });
 });
 app.get('/',(req,res)=>{
-    res.sendFile(path.join(__dirname, '../public/login.html'));
+    if (regClient.length>0) {
+        res.sendFile(path.join(__dirname, '../public/index.html'));
+    }else{
+        res.set({contentType:"text/html"})
+        res.send(`<a href="/api/auth/login">LOGIN</a>`)
+    }
 })
 
 app.post('/api/auth/register',(req,res)=>{
     regClient.push(req.body);
-    res.sendFile(path.join(__dirname, '../public/index.html'));
+    res.sendFile(path.join(__dirname, '../public/login.html'));
 })
 app.post('/api/auth/login',(req,res)=>{
     if (regClient.length>0) {
-        res.sendFile(path.join(__dirname, '../public/index.html'));
+        res.sendFile(path.join(__dirname, '../public/login.html'));
     }else{
         res.send(JSON.stringify({response:"no reg found"}))
     }
