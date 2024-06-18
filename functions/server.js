@@ -4,20 +4,26 @@ const serverless = require('serverless-http');
 const app = express();
 app.use(cors());
 app.use(express.json());
-const regClient = []
-app.get('/', (req, res) => {
-    res.set({ contentType: "text/html" })
-    res.send(`<a href="/api/auth/login">LOGIN</a>`)
+
+const regClient=[]
+
+app.get('/',(req,res)=>{
+    if (regClient.length>0) {
+        res.sendFile(path.join(__dirname, '../index.html'));
+    }else{
+        res.set({contentType:"text/html"})
+        res.send(`<a href="/api/auth/login">LOGIN</a>`)
+    }
 })
-app.post('/api/auth/register', (req, res) => {
+app.post('/api/auth/register',(req,res)=>{
     regClient.push(req.body);
     res.sendFile(path.join(__dirname, '../public/login.html'));
 })
-app.post('/api/auth/login', (req, res) => {
-    if (regClient.length > 0) {
+app.post('/api/auth/login',(req,res)=>{
+    if (regClient.length>0) {
         res.sendFile(path.join(__dirname, '../public/login.html'));
-    } else {
-        res.send(JSON.stringify({ response: "no reg found" }))
+    }else{
+        res.send(JSON.stringify({response:"no reg found"}))
     }
 })
 
