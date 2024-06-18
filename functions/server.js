@@ -7,7 +7,7 @@ const serverless = require('serverless-http');
 const app = express();
 app.use(cors());
 app.use(express.json());
-
+app.use(express.static(path.join(__dirname, '../public')))
 const router = express.Router();
 const regClient=[]
 router.get('/', (req, res) => {
@@ -16,7 +16,7 @@ router.get('/', (req, res) => {
     });
 });
 app.get('/home',(req,res)=>{
-    res.send(JSON.stringify({dir:__dirname}));
+    res.send(JSON.stringify({dir:path.join(__dirname, '../public')}));
 })
 app.get('/test',(req,res)=>{
     res.send(JSON.stringify({message:'it works'}));
